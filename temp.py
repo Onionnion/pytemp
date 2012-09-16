@@ -18,16 +18,20 @@ def main():
     
     m = sys.argv[1].lower()
     if m == '-c' or m == '-f':
-        t = sys.argv[2]
+        try:
+            t = float(sys.argv[2])
+        except ValueError:
+            print "Improper format!"
+            printHelp()
     else:
         print "Improper format!"
         printHelp()
-    
+
     if m == '-c':
-        newTemp = (float(t) - 32) / 1.8
+        newTemp = (t - 32) / 1.8
         print "%sF = %dC" % (t, newTemp)
     elif m == '-f':
-        newTemp = float(t) * 1.8 + 32
+        newTemp = t * 1.8 + 32
         print "%sC = %dF" % (t, newTemp)
     else:
         exit("SANITY CHECK FAILURE!")
