@@ -1,0 +1,8 @@
+Simple Celsius/Fahrenheit converter written in Python 2.
+
+Simply enter ./temp.py <option> <tempurature to convert> to run.
+
+Options:
+    -h: Displays this message.
+    -f: Convert to Farenheit.
+    -c: Convert to Celsius.
